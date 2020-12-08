@@ -1,0 +1,22 @@
+import random
+
+WORDS = ("hangeland", "mitrovic", "cairney", "bullard", "gera")
+word = random.choice(WORDS)
+Length = len(word)
+lives = 5
+win = 0
+print("Welcome to Fulham hangman you have 5 lives to find the hidden name")
+print("The word is ", Length, " letters long")
+while lives>0 & win < 1:
+            guess = input("What letter do you guess: ")
+            FIND = word.find(guess) + 1
+            if(guess == word):
+                    print("YOU WIN")
+            elif  FIND > 0:
+                    print()
+            else:
+                    print("INCORRECT")
+                    lives= lives - 1
+else: print("GAME OVER")
+
+end
